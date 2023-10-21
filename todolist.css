@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --default:rgba(0,0,0,0.3);
+    --accent:#00BFFF
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    background: #00BFFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    font-size: 18px;
+    font-weight: 300px;
+}
+
+.todo{
+    padding: 32px;
+    background-color: #fff;
+    width: 90vw;
+    border-radius: 16px;
+}
+
+
+.todo__content {
+}
+.todo__title {
+}
+.todo__new {
+    --size:50px;
+    display:flex;
+    margin:16px 0 32px;
+    /* outline: 1px solid #FF00FF; */
+}
+
+.todo__new input {
+    margin-right: 16px;
+    font-size: 18px;
+    padding:8px 16px;
+    height:var(--size)
+    border: 1px solid var(--default);
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.todo__add,
+.todo__task-del {
+    cursor: pointer;
+    text-align: center;
+    line-height:calc(var(--size)*0.95);
+    border-radius: var(--size);
+    height:var(--size);
+    width: var(--size);
+    font-size: 32px;
+    font-weight: 200;
+    background-color: var(--accent);
+    color:#fff;
+    
+    
+}
+
+.todo__list > *:not(:last-child)  {
+    margin-bottom: 8px;
+}
+.todo__task {
+    cursor: default;
+    --size:36px;
+    min-height: var(--size);
+    display: flex;
+    align-items: center;
+    /* outline: 1px solid red ; */
+}
+.todo__task:hover .todo__task-del{
+    display: block;
+}
+
+.todo__task_complete .todo__task-text{
+    text-decoration: line-through;
+    color:var(--default)
+    
+}
+.todo__checkbox {
+    margin-right: 16px;
+    
+}
+
+.todo__checkbox input{
+    display: none;
+}
+
+.todo__checkbox input:checked + div{
+    background-color: var(--accent);
+}
+
+.todo__checkbox input:checked + div::after{
+    display: block;
+}
+
+
+.todo__checkbox div{
+    cursor: pointer;
+    --size:28px;
+    height:var(--size);
+    width:var(--size);
+    border:1px solid var(--accent);
+    border-radius: 4px;
+    position: relative;
+    color:#fff;
+}
+
+.todo__checkbox div::after{
+    text-align: center;
+    display: none;
+    content: "\2713";
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
+.todo__task-text {
+    font-size: 20px;
+}
+.todo__task-del {
+    
+    display: none;
+    margin-left: auto;
+    margin-right: 0;
+    line-height:calc(var(--size)*0.88);
+    font-size: 44px;
+
+}
