@@ -34,7 +34,7 @@ body{
 .todo__new {
     --size:50px;
     display:flex;
-    margin:16px 0 32px;
+    margin:16px 0;
     /* outline: 1px solid #FF00FF; */
 }
 
@@ -63,7 +63,9 @@ body{
     
     
 }
-
+.todo__list{
+    margin-top: 20px;
+}
 .todo__list > *:not(:last-child)  {
     margin-bottom: 8px;
 }
