@@ -35,7 +35,7 @@ function isNotHaveTask(text, list) {
 
     list.forEach((task) => {
         if(task.text == text){
-            alert('Задачи уже существует!')
+            alert('Задача уже существует!')
             dom.new.value = ""
             isNotHave = false //Если задача есть, то хуярим ей ложь, что отсутствует 
         }
